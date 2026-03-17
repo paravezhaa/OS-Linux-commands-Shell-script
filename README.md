@@ -386,15 +386,21 @@ tar -tvf backup.tar
 
 tar -xvf backup.tar
 ## OUTPUT
+![image](image/51-1.png)
+![image](image/51-2.png)
+![image](image/51-3.png)
+![image](image/51-4.png)
+![image](image/51-5.png)
 
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
- 
+ ![image](image/52.png)
+
 gunzip backup.tar.gz
 ## OUTPUT
-
+![image](image/53.png)
  
 # Shell Script
 ```
