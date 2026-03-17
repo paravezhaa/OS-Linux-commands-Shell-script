@@ -42,24 +42,24 @@ s.n. dasgupta
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-![image](image.png)
+
 
 
 cat < file2
 ## OUTPUT
-![image](image-1.png)
+
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- ![image](image/3.png)
+ 
 comm file1 file2
  ## OUTPUT
-![image](image/4.png)
+
  
 diff file1 file2
 ## OUTPUT
-![image](image/5.png)
+
 
 #Filters
 
@@ -82,18 +82,18 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-![image](image/6.png)
+
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-![image](image/7.png)
+
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-![image](image/8.png)
+
 
 cat < newfile 
 ```
@@ -107,44 +107,40 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
-![image](image/9.png)
+
 
 
 grep hello newfile 
 ## OUTPUT
-![image](image/10.png)
+
 
 
 
 grep -v hello newfile 
 ## OUTPUT
-![image](image/11.png)
+
 
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-![image](image/12.png)
+
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-![image](image/13.png)
+
 
 
 
 grep -R ubuntu /etc
 ## OUTPUT
-![image](image/14-1.png)
-![image](image/14-2.png)
-![image](image/14-3.png)
-![image](image/14-4.png)
-![image](image/14-5.png)
+
 
 
 grep -w -n world newfile   
 ## OUTPUT
-![image](image/15.png)
+
 
 cat < newfile 
 ```
@@ -167,60 +163,60 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-![image](image/16.png)
+
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-![image](image/17.png)
+
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-![image](image/18.png)
+
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-![image](image/19.png)
+
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
-![image](image/20.png)
+
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
-![image](image/21.png)
+
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-![image](image/22.png)
+
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-![image](image/23.png)
+
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-![image](image/24.png)
+
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-![image](image/25.png)
+
 
 egrep l{2} newfile
 ## OUTPUT
-![image](image/26.png)
+
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-![image](image/27.png)
+
 
 cat > file23
 ```
@@ -239,80 +235,79 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
-![image](image/28.png)
+
 
 sed -n -e '$p' file23
 ## OUTPUT
-![image](image/29.png)
+
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
-![image](image/30.png)
+
 
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
-![image](image/31.png)
+
 
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
-![image](image/32.png)
+
 
 
 sed -n -e '1,5p' file23
 ## OUTPUT
-![image](image/33.png)
+
 
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
-![image](image/34.png)
+
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-![image](image/35.png)
+
 
 
 seq 10 
 ## OUTPUT
-![image](image/36.png)
+
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-![image](image/37.png)
+
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-![image](image/38.png)
+
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
-![image](image/39.png)
+
 
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-![image](image/40.png)
 
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-![image](image/41.png)
+
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-![image](image/42.png)
+
 
 
 sed -n '2,4{s/$/*/;p}' file23
-![image](image/43.png)
+
 
 #Sorting File content
 cat > file21
@@ -325,7 +320,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-![image](image/44.png)
+
 
 cat > file22
 ```
@@ -338,14 +333,14 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-![image](image/45.png)
+
 
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-![image](image/46.png)
+
 cat < urllist.txt
 ```
 www. yahoo. com
@@ -361,18 +356,18 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-![image](image/47-1.png)
-![image](image/47-2.png)
+
+
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-![image](image/48-1.png)
-![image](image/48-2.png)
+
+
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
-![image](image/49.png)
+
 
 mkdir backupdir
  
@@ -382,7 +377,7 @@ cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
-![image](image/50.png)
+
 
 tar -xvf backup.tar
 ## OUTPUT
